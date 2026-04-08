@@ -1,0 +1,108 @@
+/* Exercício 1: div{
+    width: 200px;
+    background-color: gray;
+    padding: 20px;
+    border: 2px solid black;
+}
+*/
+
+/* Exercício 2
+div{
+    width: 200px;
+    background-color: gray;
+    padding: 20px;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+*/
+
+/* Exercício 3*/
+
+/*.box {
+  width: 150px;
+  height: 100px;
+  display: inline-block; 
+  margin: 10px; 
+  padding: 20px;
+}
+
+.box1 {
+  background-color: lightblue;
+}
+
+.box2 {
+  background-color: lightcoral;
+}
+  */
+
+/*Exercício 4*/
+/*.box {
+  background-color: aqua;
+  width: 200px;
+  padding: 20px;
+  border: 5px solid black;
+}
+  */
+
+/*Exercício 5*/
+/*.box {
+  background-color: aqua;
+  width: 200px;
+  padding: 20px;
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+  */
+
+/*Exercício 6*/
+/*.box {
+  width: 200px;
+  margin: 0 auto;
+  background-color: lightblue;
+}
+  */
+
+/*Exercício 7*/
+/*.box1, .box2 {
+  height: 100px;
+  margin: 20px;
+}
+  */
+
+/*Exercício 8*/
+/*.card {
+  width: 250px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin: 20px;
+  background-color: white;
+}
+  */
+
+/*Exercício 9*/
+/*Errado*/
+/*.box {
+  width: 200px;
+  padding: 30px;
+  border: 10px solid black;
+}*/
+/*Correto*/
+/*.box {
+  width: 200px;
+  padding: 30px;
+  border: 10px solid black;
+  box-sizing: border-box;
+}*/
+
+/*Exercício 10*/
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 30%;
+  padding: 20px;
+  background-color: lightgray;
+  box-sizing: border-box;
+}

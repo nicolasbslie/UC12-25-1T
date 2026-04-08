@@ -1,0 +1,14 @@
+.card {
+  width: 250px;           
+  padding: 20px;          
+  background: #ddd;
+}
+
+.btn {
+  display: inline-block;   
+  width: 120px;            
+  background: gray;
+  color: white;
+  border: none;
+  padding: 10px;
+}

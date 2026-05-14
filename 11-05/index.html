@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechStore — Exercício CSS Position</title>
+  <link rel="stylesheet" href="styles/index.css">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet"
+  />
+
+</head>
+<body>
+
+  <!-- =============================================
+       PARTE 7 — position: sticky (HEADER)
+       Acompanha a rolagem colando no topo da tela.
+  ============================================= -->
+  <header>
+    <div class="logo">Tech<span>Store</span></div>
+
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Produtos</a>
+      <a href="#">Promoções</a>
+      <a href="#">Contato</a>
+    </nav>
+
+    <span class="pos-label">position: sticky</span>
+  </header>
+
+  <div class="page-wrapper">
+
+    <!-- =============================================
+         PARTE 6 — position: sticky (ASIDE / MENU)
+         O menu lateral permanece visível durante
+         a rolagem sem sair do fluxo normal.
+    ============================================= -->
+    <aside>
+      <span class="pos-label">position: sticky</span>
+      <h3>Categorias</h3>
+      <ul>
+        <li><a href="#">Eletrônicos</a></li>
+        <li><a href="#">Roupas</a></li>
+        <li><a href="#">Promoções</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </aside>
+
+    <div class="main-content">
+
+      <!-- =========================================
+           PARTE 2 — position: static
+           O parágrafo segue o fluxo normal.
+           top e left são ignorados pelo navegador.
+      ========================================== -->
+      <section class="static-demo">
+        <span class="pos-label">position: static</span>
+
+        <p class="static-elem">
+          Este parágrafo usa <strong>position: static</strong>.
+          As propriedades <code>top: 20px</code> e <code>left: 20px</code>
+          foram aplicadas no CSS, mas são completamente ignoradas —
+          o elemento segue o fluxo normal da página.
+        </p>
+
+        <p class="note">
+          💡 Static é o valor padrão de todo elemento.
+          Propriedades de deslocamento (top, left, right, bottom) não têm efeito com static.
+        </p>
+      </section>
+
+      <!-- =========================================
+           PARTE 3 — position: relative (CARD)
+           PARTE 4 — position: absolute (BADGE)
+      ========================================== -->
+      <section>
+        <h2 class="section-title">Produto em Destaque</h2>
+
+        <!--
+          PARTE 3: .product-card tem position: relative
+                   e está deslocado top: 10px / left: 15px.
+                   O espaço original ainda é ocupado.
+
+          PARTE 4: .badge tem position: absolute
+                   e se posiciona em relação ao .product-card (pai relative).
+        -->
+        <div class="product-card">
+
+          <!-- BADGE — position: absolute (PARTE 4) -->
+          <span class="badge">Novo</span>
+
+          <!-- Imagem placeholder do produto -->
+          <div class="product-img"></div>
+
+          <div class="card-body">
+            <span class="pos-label">
+              position: relative (card) · position: absolute (badge)
+            </span>
+            <h2>Smartphone Ultra X12</h2>
+            <p>
+              Tela AMOLED 6.7", câmera de 200 MP, bateria de 5500 mAh e
+              carregamento turbo de 120 W. O mais avançado da linha.
+            </p>
+            <div class="price">R$ 3.299,00</div>
+            <button class="btn-buy">Comprar agora</button>
+          </div>
+        </div>
+
+        <p class="note" style="margin-top: 1.25rem;">
+          💡 O card usa <strong>position: relative</strong> — deslocado 10 px para baixo e 15 px
+          para a direita, mas seu espaço original é preservado no fluxo.<br />
+          A badge usa <strong>position: absolute</strong> em relação ao card (pai posicionado),
+          saindo do fluxo normal e flutuando sobre a imagem.
+        </p>
+      </section>
+
+      <!-- Conteúdo extra para garantir rolagem da página -->
+      <section class="extra-content">
+
+        <div class="content-block">
+          <h3>Por que CSS Position importa?</h3>
+          <p>
+            Entender os tipos de posicionamento é fundamental para construir interfaces modernas.
+            Com <code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code>
+            e <code>sticky</code> você controla precisamente onde cada elemento aparece na tela,
+            como ele interage com os vizinhos e como se comporta durante a rolagem.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h3>Resumo dos tipos</h3>
+          <p>
+            <strong>static</strong> — fluxo normal, ignora top/left/right/bottom.<br />
+            <strong>relative</strong> — deslocamento visual mantendo o espaço original.<br />
+            <strong>absolute</strong> — remove do fluxo, posiciona em relação ao pai posicionado mais próximo.<br />
+            <strong>fixed</strong> — remove do fluxo, posiciona em relação à viewport (janela do navegador).<br />
+            <strong>sticky</strong> — comportamento híbrido: relative até atingir o threshold, depois age como fixed.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h3>Dica de z-index</h3>
+          <p>
+            Elementos com <code>position</code> diferente de <code>static</code> criam um contexto
+            de empilhamento. Use <code>z-index</code> para controlar quem fica "na frente".
+            Quanto maior o valor, mais à frente o elemento aparece.
+            Nesta página: header (z-index: 1000), botão flutuante (z-index: 999) e badge (z-index: 2).
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h3>Observando o sticky em ação</h3>
+          <p>
+            Role a página para observar o comportamento do menu lateral
+            (<code>position: sticky</code>), do cabeçalho (<code>position: sticky</code>)
+            e do botão de ajuda (<code>position: fixed</code>) durante a rolagem.
+            Cada um demonstra um conceito diferente de posicionamento em CSS.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h3>Acessibilidade e posicionamento</h3>
+          <p>
+            Elementos com <code>position: absolute</code> ou <code>fixed</code> saem do fluxo normal,
+            o que pode causar sobreposição indesejada de conteúdo. Sempre garanta que textos e botões
+            importantes não fiquem ocultos sob outros elementos. Use <code>z-index</code> com responsabilidade.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h3>Ofertas da semana</h3>
+          <p>
+            Confira nossas promoções imperdíveis em eletrônicos, roupas e acessórios.
+            Novos produtos chegam toda semana. Ative as notificações para não perder nenhuma oferta.
+          </p>
+        </div>
+
+      </section>
+
+    </div><!-- /.main-content -->
+  </div><!-- /.page-wrapper -->
+
+  <!-- =============================================
+       PARTE 5 — position: fixed (BOTÃO FLUTUANTE)
+       Permanece sempre visível no canto inferior
+       direito, independente da rolagem da página.
+  ============================================= -->
+  <button class="float-btn" title="Ajuda / Chat">💬</button>
+
+</body>
+</html>

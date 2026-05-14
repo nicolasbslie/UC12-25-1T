@@ -1,0 +1,7 @@
+#btn{
+    border-radius: 15%;
+    background-color: black;
+    color:white;
+    transition: background-color 0.3s linear, box-shadow 0.3s linear;
+    box-shadow: 0 0 20px purple;
+}

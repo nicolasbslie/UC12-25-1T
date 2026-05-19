@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderland - Travel Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/styles/index.css">
+</head>
+<body>
+    <div class="topbar">
+  <div>
+    <a href="tel:+12345677789">+123 45677 789</a>
+    &nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="mailto:info@wanderland.com">wanderland@qodeinteractive.com</a>
+  </div>
+  <div class="topbar-socials">
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-twitter"></i>
+    <i class="fa-brands fa-facebook-f"></i>
+    <i class="fa-brands fa-youtube"></i>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <a href="#" class="logo">Wander<span>land</span></a>
+
+  <!-- MENU -->
+  <nav id="navMenu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Pages</a></li>
+      <li><a href="#">Destinations</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Landing</a></li>
+    </ul>
+  </nav>
+
+  <button class="nav-search" aria-label="Search">⌕</button>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+
+  <div class="hero-bg" style="background-image:url('//wanderland.qodeinteractive.com/wp-content/uploads/2019/11/h1-rev-slide1-bckg.jpg')"></div>
+  <div class="hero-content">
+    <div class="slide-cat">Adventure</div>
+    <div class="slide-meta">October 11, 2019 &nbsp;·&nbsp; by Alisa Michaels</div>
+    <h1 class="slide-title">Everyday Urban Concrete Jungle</h1>
+    <p class="slide-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <a href="#" class="btn-read">Read More</a>
+  </div>
+
+  <!-- Setas decorativas -->
+  <button class="slider-prev" id="slidePrev">&#8592;</button>
+  <button class="slider-next" id="slideNext">&#8594;</button>
+
+</section>
+
+<!-- CLientes -->
+<div class="clients">
+  <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h1-clients-img-01.png" alt="Partner 1">
+  <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h1-clients-img-02.png" alt="Partner 2">
+  <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h1-clients-img-03.png" alt="Partner 3">
+  <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h1-clients-img-04.png" alt="Partner 4">
+  <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h1-clients-img-05.png" alt="Partner 5">
+</div>
+
+<!-- TLugares essencias para viajar -->
+<section class="tips-section">
+  <!-- Post 1 -->
+  <div class="post-card reveal">
+    <a href="#" class="post-img-wrap">
+      <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-01.jpg" alt="Urban Jungle">
+    </a>
+    <div class="post-cat">Travel Tips</div>
+    <div class="post-meta">October 8, 2019 <span>·</span> by Alisa Michaels</div>
+    <a href="#" class="post-card-title">Moving trough: the everyday urban jungle of your city</a>
+    <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+    <a href="#" class="read-more">Read More</a>
+  </div>
+
+  <!-- Post 2 -->
+  <div class="post-card reveal" style="transition-delay:.15s">
+    <a href="#" class="post-img-wrap">
+      <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-02.jpg" alt="Amazon">
+    </a>
+    <div class="post-cat">Tips</div>
+    <div class="post-meta">October 10, 2019 <span>·</span> by Alisa Michaels</div>
+    <a href="#" class="post-card-title">Top Hiking Trails in the Peruvian Amazon Rain Forest</a>
+    <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+    <a href="#" class="read-more">Read More</a>
+  </div>
+
+  <!-- Newsletter box -->
+  <div class="newsletter-box reveal" style="transition-delay:.3s">
+    <div class="section-label">Lorem ipsum dolor</div>
+    <h3>Finding the perfect trails to hike is easy with newsletter</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore minim veniam.</p>
+    <input class="nl-input" type="email" placeholder="Your email address">
+    <button class="nl-btn">Subscribe</button>
+  </div>
+</section>
+
+<!-- Blog Posts -->
+<section class="featured-section">
+  <div class="featured-inner">
+    <div class="featured-header reveal">
+      <div class="section-label">Lorem ipsum dolore</div>
+      <h2 class="section-title">Featured blog posts</h2>
+    </div>
+    <div class="posts-grid-4">
+      <div class="post-card post-card-sm reveal">
+        <a href="#" class="post-img-wrap">
+          <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-03.jpg" alt="Amazon Brazil">
+        </a>
+        <div class="post-cat">Adventure</div>
+        <div class="post-meta">October 8, 2019 <span>·</span> by Alisa Michaels</div>
+        <a href="#" class="post-card-title">Pre-Trip Reading & Travel Plans for Amazon, Brazil</a>
+      </div>
+      <div class="post-card post-card-sm reveal" style="transition-delay:.1s">
+        <a href="#" class="post-img-wrap">
+          <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-04.jpg" alt="Grand Canyon">
+        </a>
+        <div class="post-cat">Adventure</div>
+        <div class="post-meta">October 8, 2019 <span>·</span> by Alisa Michaels</div>
+        <a href="#" class="post-card-title">The Ultimate Grand Canyon Travel Guide for alpinists</a>
+      </div>
+      <div class="post-card post-card-sm reveal" style="transition-delay:.2s">
+        <a href="#" class="post-img-wrap">
+          <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-05.jpg" alt="Iceland">
+        </a>
+        <div class="post-cat">Adventure</div>
+        <div class="post-meta">October 8, 2019 <span>·</span> by Alisa Michaels</div>
+        <a href="#" class="post-card-title">Guided Hikes in Iceland – Rhyolite Mountain Trail</a>
+      </div>
+      <div class="post-card post-card-sm reveal" style="transition-delay:.3s">
+        <a href="#" class="post-img-wrap">
+          <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-45.jpg" alt="Reykjavik">
+        </a>
+        <div class="post-cat">Adventure</div>
+        <div class="post-meta">October 10, 2019 <span>·</span> by Alisa Michaels</div>
+        <a href="#" class="post-card-title">My Favorite Hiking Trails Around Reykjavík</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Shop -->
+<section class="shop-section">
+  <div class="shop-header reveal">
+    <div class="section-label">Lorem ipsum dolor</div>
+    <h2 class="section-title">Travel essentials items</h2>
+  </div>
+  <div class="products-strip">
+    <div class="product-card reveal">
+      <div class="product-img">
+        <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/shop-img-10-1-600x502.jpg" alt="Shoes">
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="product-price">$250.00</div>
+      <div class="product-name">Shoes</div>
+    </div>
+    <div class="product-card reveal" style="transition-delay:.1s">
+      <div class="product-img">
+        <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/shop-img-12-1-600x502.jpg" alt="Camera Tripod">
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="product-price">$200.00</div>
+      <div class="product-name">Camera Tripod</div>
+    </div>
+    <div class="product-card reveal" style="transition-delay:.2s">
+      <div class="product-img">
+        <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/shop-img-11w-600x502.jpg" alt="Raincoat">
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="product-price">$200.00</div>
+      <div class="product-name">Raincoat</div>
+    </div>
+    <div class="product-card reveal" style="transition-delay:.3s">
+      <div class="product-img">
+        <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/shop-img-13-1-600x502.jpg" alt="DSLR Camera">
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="product-price">$1,800.00</div>
+      <div class="product-name">DSLR Camera</div>
+    </div>
+    <div class="product-card reveal" style="transition-delay:.4s">
+      <div class="product-img">
+        <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/shop-img-14-1-600x502.jpg" alt="Water Bottle">
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="product-price">$17.00</div>
+      <div class="product-name">Water Bottle</div>
+    </div>
+  </div>
+</section>
+
+<!-- Destinos -->
+<section class="destinations-section">
+  <div class="dest-header reveal">
+    <div class="section-label">Explore the world</div>
+    <h2 class="section-title">Popular Destinations</h2>
+  </div>
+  <div class="dest-slider-wrap">
+    <div class="dest-track" id="destTrack">
+      <div class="dest-card">
+        <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h1-img-21.jpg" alt="Sweden">
+        <div class="dest-overlay">
+          <div class="dest-cat">Popular</div>
+          <div class="dest-name">Sweden</div>
+          <p class="dest-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+          <a href="#" class="dest-link">Read More</a>
+        </div>
+      </div>
+      <div class="dest-card">
+        <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h1-dest-slider-img-2.jpg" alt="Stockholm">
+        <div class="dest-overlay">
+          <div class="dest-cat">Popular</div>
+          <div class="dest-name">Stockholm</div>
+          <p class="dest-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+          <a href="#" class="dest-link">Read More</a>
+        </div>
+      </div>
+      <div class="dest-card">
+        <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-dest-slider-img-3.jpg" alt="Colorado">
+        <div class="dest-overlay">
+          <div class="dest-cat">Popular</div>
+          <div class="dest-name">Colorado</div>
+          <p class="dest-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+          <a href="#" class="dest-link">Read More</a>
+        </div>
+      </div>
+      <div class="dest-card">
+        <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-dest-slider-img-4.jpg" alt="Norway">
+        <div class="dest-overlay">
+          <div class="dest-cat">Popular</div>
+          <div class="dest-name">Norway</div>
+          <p class="dest-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+          <a href="#" class="dest-link">Read More</a>
+        </div>
+      </div>
+      <div class="dest-card">
+        <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-06-1.jpg" alt="Iceland">
+        <div class="dest-overlay">
+          <div class="dest-cat">Adventure</div>
+          <div class="dest-name">Iceland</div>
+          <p class="dest-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+          <a href="#" class="dest-link">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="dest-nav">
+      <button class="dest-btn" id="destPrev">&#8592;</button>
+      <button class="dest-btn" id="destNext">&#8594;</button>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES GRID -->
+<section class="categories-section">
+  <div class="cats-inner">
+    <div class="cats-grid">
+      <div class="cat-item reveal">
+        <div class="cat-icon">🏔️</div>
+        <div class="cat-count">1 destination</div>
+        <div class="cat-name">Adventure</div>
+      </div>
+      <div class="cat-item reveal" style="transition-delay:.07s">
+        <div class="cat-icon">🏖️</div>
+        <div class="cat-count">3 destinations</div>
+        <div class="cat-name">Beaches</div>
+      </div>
+      <div class="cat-item reveal" style="transition-delay:.14s">
+        <div class="cat-icon">⛺</div>
+        <div class="cat-count">2 destinations</div>
+        <div class="cat-name">Camping</div>
+      </div>
+      <div class="cat-item reveal" style="transition-delay:.21s">
+        <div class="cat-icon">🤝</div>
+        <div class="cat-count">1 destination</div>
+        <div class="cat-name">Friendly</div>
+      </div>
+      <div class="cat-item reveal" style="transition-delay:.28s">
+        <div class="cat-icon">💰</div>
+        <div class="cat-count">9 destinations</div>
+        <div class="cat-name">Low Budget</div>
+      </div>
+      <div class="cat-item reveal" style="transition-delay:.35s">
+        <div class="cat-icon">⭐</div>
+        <div class="cat-count">4 destinations</div>
+        <div class="cat-name">Popular</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECENT POSTS -->
+<section class="recent-section">
+  <div class="reveal">
+    <div class="section-label">Latest stories</div>
+    <h2 class="section-title">From the journal</h2>
+  </div>
+  <div class="posts-grid-2">
+    <div class="post-horiz reveal">
+      <a href="#" class="post-img-wrap">
+        <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-06-1.jpg" alt="Skiing">
+      </a>
+      <div>
+        <div class="post-meta">October 10, 2019 <span>·</span> by Alisa Michaels</div>
+        <a href="#" class="post-card-title">Essential Skiing Tips For Beginners & Novices</a>
+      </div>
+    </div>
+    <div class="post-horiz reveal" style="transition-delay:.12s">
+      <a href="#" class="post-img-wrap">
+        <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-07-1.jpg" alt="Hiking">
+      </a>
+      <div>
+        <div class="post-meta">October 10, 2019 <span>·</span> by Alisa Michaels</div>
+        <a href="#" class="post-card-title">Hidden hiking routs in the outskirts of your city</a>
+      </div>
+    </div>
+    <div class="post-horiz reveal" style="transition-delay:.24s">
+      <a href="#" class="post-img-wrap">
+        <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-08-1.jpg" alt="Rock Climbing">
+      </a>
+      <div>
+        <div class="post-meta">October 10, 2019 <span>·</span> by Alisa Michaels</div>
+        <a href="#" class="post-card-title">Rock climbing is one of the best hobbies for creatives</a>
+      </div>
+    </div>
+    <div class="post-horiz reveal" style="transition-delay:.36s">
+      <a href="#" class="post-img-wrap">
+        <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-09-1.jpg" alt="Greece">
+      </a>
+      <div>
+        <div class="post-meta">October 10, 2019 <span>·</span> by Alisa Michaels</div>
+        <a href="#" class="post-card-title">Hidden gems you must visit while exploring Greece</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="cta-label"><span>Lorem ipsum dolor sit amet</span></div>
+  <h2>How to Find Your<br>Digital Resort</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+  <div class="cta-socials">
+    <a href="#">𝐈𝐆</a>
+    <a href="#">𝕏</a>
+    <a href="#">𝐅</a>
+    <a href="#">▶</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a href="#" class="footer-logo">Wander<span>land</span></a>
+      <p class="footer-about">Based in Utah, USA, Wanderland is a blog by Markus Thompson. His posts explore outdoor experiences through photos and diaries with tips & tricks.</p>
+      <div class="footer-socials">
+        <a href="#">𝐈𝐆</a>
+        <a href="#">𝕏</a>
+        <a href="#">𝐅</a>
+        <a href="#">▶</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h6>About the Blog</h6>
+      <p style="font-size:14px;line-height:1.7">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod mas.</p>
+    </div>
+    <div class="footer-col">
+      <h6>Recent News</h6>
+      <div class="footer-news-item">
+        <div class="footer-news-date">October 2, 2019</div>
+        <a href="#" class="footer-news-title">Trip to Iceland</a>
+      </div>
+      <div class="footer-news-item">
+        <div class="footer-news-date">October 2, 2019</div>
+        <a href="#" class="footer-news-title">On the Shores of a Vanishing Island in India</a>
+      </div>
+      <div class="footer-news-item">
+        <div class="footer-news-date">October 2, 2019</div>
+        <a href="#" class="footer-news-title">Visiting Rabat</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h6>Subscribe to Newsletter</h6>
+      <input class="footer-nl-input" type="email" placeholder="Your email address">
+      <button class="footer-nl-btn">Subscribe</button>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 <a href="#">Wanderland</a>, All Rights Reserved</span>
+    <span>Designed by <a href="https://qodeinteractive.com" target="_blank">Qode Interactive</a></span>
+  </div>
+</footer>
+    <script src="assets/script/index.js"></script>
+</body>
+</html>

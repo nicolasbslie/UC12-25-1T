@@ -11,7 +11,6 @@
     --light-gray: #f2f2f0;
   }
 
-  html { scroll-behavior: smooth; }
 
   body {
     font-family: 'Lato', sans-serif;
@@ -39,56 +38,92 @@
 
   /* ─── Header e Nav ─── */
   header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: var(--white);
-    border-bottom: 1px solid rgba(0,0,0,.08);
-    padding: 0 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 72px;
-    box-shadow: 0 2px 20px rgba(0,0,0,.06);
+  position: absolute;
+  top: 50px; /* fica logo abaixo da topbar */
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px 50px;
+  background: transparent;
+}
+
+/* MENU */
+#navMenu ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+}
+
+#navMenu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+/* LOGO CENTRAL */
+#navMenu .logo img {
+  width: 140px;
+  height: auto;
+  display: block;
+}
+
+/* BOTÃO DE BUSCA */
+.nav-search {
+  position: absolute;
+  right: 80px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* MENU HAMBÚRGUER */
+.menu-toggle {
+  position: absolute;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+}
+
+/* RESPONSIVO */
+@media (max-width: 800px) {
+  #navMenu {
+    display: none;
   }
 
-  .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: .04em;
-    color: var(--dark);
+  .menu-toggle {
+    display: block;
   }
-  .logo span { color: var(--olive); }
-
-  nav ul { list-style: none; display: flex; gap: 32px; }
-  nav i {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--dark);
-    transition: color .2s;
-    position: relative;
-    padding-bottom: 4px;
-  }
-  nav i::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0;
-    width: 0; height: 1px;
-    background: var(--olive);
-    transition: width .3s;
-  }
-  nav i:hover { color: var(--olive); }
-  nav i:hover::after { width: 100%; }
 
   .nav-search {
-    background: none; border: none; cursor: pointer;
-    font-size: 16px; color: var(--dark); transition: color .2s;
+    right: 70px;
   }
-  .nav-search:hover { color: var(--olive); }
 
+  .topbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  header {
+    top: 80px;
+    padding: 20px;
+  }
+}
   /* ─── Hero ─── */
   .hero {
     position: relative;
@@ -110,7 +145,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,.7) 0%, rgba(0,0,0,.15) 50%, transparent 100%);
+    background: linear-gradient(to top, rgba(75, 66, 66, 0.7) 0%, rgba(0,0,0,.15) 50%, transparent 100%);
   }
 
   .hero-content {
@@ -143,18 +178,16 @@
     margin-bottom: 28px;
     max-width: 480px;
   }
-  .btn-read {
-    display: inline-block;
-    padding: 12px 32px;
-    border: 1.5px solid var(--white);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    color: var(--white);
-    transition: background .3s, color .3s;
+ .dest-btn {
+    width: 44px; height: 44px;
+    background: none;
+    border: 1.5px solid var(--dark);
+    cursor: pointer;
+    font-size: 18px;
+    display: flex; align-items: center; justify-content: center;
+    transition: background .2s, color .2s;
   }
-  .btn-read:hover { background: var(--white); color: var(--dark); }
+  .dest-btn:hover { background: var(--dark); color: var(--white); }
 
   .slide-meta { margin-bottom: 10px; font-size: 12px; opacity: .7; letter-spacing: .05em; }
 
@@ -171,20 +204,36 @@
     font-size: 18px;
     display: flex; align-items: center; justify-content: center;
     opacity: 0.6;
+    cursor: pointer;
+  }
+
+  .slider-prev:hover{
+    background: rgba(252, 252, 252, 0.596);
+  }
+
+.slider-next:hover{
+    background: rgba(252, 252, 252, 0.596);
   }
   .slider-prev { right: 120px; }
   .slider-next { right: 70px; }
 
   /* ─── Clientes ─── */
   .clients {
-    background: var(--dark);
+    background: white;
     padding: 28px 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 56px;
     overflow: hidden;
+    cursor: pointer;
+    transition: filter 0.3s ease;
   }
+
+  .clients img:hover {
+  filter: brightness(0.7);
+}
+
 
   /* ─── seção ─── */
   .section-label {
@@ -277,14 +326,7 @@
     border-radius: 50%;
     background: rgba(124,140,110,.2);
   }
-  .newsletter-box .section-label { color: var(--olive); }
-  .newsletter-box h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 26px;
-    font-weight: 600;
-    line-height: 1.3;
-    margin-bottom: 16px;
-  }
+
   .newsletter-box p { font-size: 14px; line-height: 1.7; opacity: .75; margin-bottom: 28px; }
   .nl-input {
     width: 100%;
@@ -314,7 +356,7 @@
   }
   .nl-btn:hover { background: #8fa07f; }
 
-  /* ─── Posts 4 ─── */
+  /* ─── Posts: 4 ─── */
   .featured-section {
     background: var(--light-gray);
     padding: 90px 40px;
@@ -534,7 +576,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: url('https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h1-img-07.png') center/cover;
+    background: black;
     opacity: .12;
   }
   .cta-label { position: relative; margin-bottom: 20px; }
@@ -701,8 +743,9 @@
   background: none;
   border: none;
   font-size: 28px;
-  color: var(--dark);
+  color: #fff; 
   cursor: pointer;
+  z-index: 1001;
 }
 
 @media (max-width: 800px) {
@@ -710,31 +753,40 @@
     display: block;
   }
 
-  nav {
+  #navMenu {
     display: none;
     position: absolute;
-    top: 72px;
+    top: 100%;
     left: 0;
     width: 100%;
-    background: white;
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     z-index: 999;
   }
 
-  nav.active {
+  #navMenu.active {
     display: block;
   }
 
-  nav ul {
+  #navMenu ul {
+    display: flex;
     flex-direction: column;
     gap: 0;
     padding: 20px 0;
+    list-style: none;
+    margin: 0;
   }
 
-  nav a {
+  #navMenu .logo {
+    display: none;
+  }
+
+  #navMenu a {
     display: block;
     padding: 14px 24px;
-    border-bottom: 1px solid rgba(0,0,0,.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    color: #1a1a18;
+    text-decoration: none;
   }
 
   .nav-search {
@@ -743,7 +795,7 @@
 }
 
 @media (min-width: 801px) {
-  nav {
+  #navMenu {
     display: block !important;
   }
 

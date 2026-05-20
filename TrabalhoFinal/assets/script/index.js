@@ -20,7 +20,6 @@
 
   autoPlay();
 
-
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
@@ -36,7 +35,6 @@ if (menuToggle && navMenu) {
     navMenu.classList.toggle('active');
   });
 
-  // Fecha ao clicar em um link
   navMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       menuToggle.classList.remove('active');
@@ -44,7 +42,6 @@ if (menuToggle && navMenu) {
     });
   });
 
-  // Remove classes ao voltar para desktop
   window.addEventListener('resize', () => {
     if (window.innerWidth > 800) {
       menuToggle.classList.remove('active');
